@@ -1,16 +1,34 @@
-## Hi there 👋
+```php
+$developer = new Dev(
+    name:  'ThinhNQ',
+    email: 'thinhnq@vn.ids.jp',
+    age:   33
+);
 
-<!--
-**ids-v-thinhnq/ids-v-thinhnq** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+$developer->setStatus(new Life\Status(
+    learning:   ['PHP', 'Reactjs', 'Software Architecture'],
+    exploring:  ['AWS'],
+    aiming:     ['']
+));
 
-Here are some ideas to get you started:
+$mySkills = new Life\Skills(
+    languages:   ['PHP', 'Bash', 'HTML/CSS', 'JavaScript', 'PowerShell'],
+    editors:     ['PHPStorm', 'VS Code', 'Notepad++', 'Vim'],
+    frameworks:  ['Bootstrap', 'Laravel', 'jQuery'],
+    databases:   ['PostgreSQL', 'MySQL', 'Redis', 'MongoDB'],
+    techStack:   [
+        'Git', 'Gitlab CI/CD', 'Markdown', 'Postman',
+        'Docker', 'Docker Compose', 'RabbitMQ', 'WebSocket',
+        'Vagrant', 'WSL2', 'Zsh', 'Nginx', 'PHP-FPM', 'Jekyll',
+        'Memcached', 'MailHog', 'CentOS', 'Ubuntu'
+    ]
+);
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+$developerRole = new Career\Developer(person: $developer, skills: $mySkills);
+
+while ($developerRole->hasCoffee())  
+{
+    $developerRole->code();
+}
+
+```
